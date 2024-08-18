@@ -11,11 +11,26 @@ class App extends StatefulWidget {
   State<App> createState() => _AppState();
 }
 
+// just dart class property
 class _AppState extends State<App> {
-  int counter = 0;
+  // int counter = 0;
+  List<int> numbers = [];
 
   void onClicked() {
-    counter += counter + 1;
+    /* method 1 (recommended)
+    setState(() {
+      counter = counter + 1;
+    });
+    */
+
+    /* method 2
+    counter = counter + 1;
+    setState(() {});
+    */
+
+    setState(() {
+      numbers.add(numbers.length);
+    });
   }
 
   @override
@@ -33,12 +48,15 @@ class _AppState extends State<App> {
                   fontSize: 30,
                 ),
               ),
+              /*
               Text(
                 '$counter',
                 style: const TextStyle(
                   fontSize: 30,
                 ),
               ),
+              */
+              for (var n in numbers) Text('$n'),
               IconButton(
                   iconSize: 40,
                   onPressed: onClicked,
