@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 2,
-        title: Text(
+        title: const Text(
           '오늘의 웹툰s',
           style: TextStyle(
             fontSize: 24,
