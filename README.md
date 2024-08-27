@@ -1,24 +1,9 @@
 # toonflix
+Nomadcoders webtoon project.
 
-Nomadcoders Flutter project.
-
-## Visual Studio Code User Setting JSON
-- "editor.codeActionsOnSave": {"source.fixAll": true} -> 저장 시 const 자동완성(final 부분 수정 시 자동생성된 const 삭제필요)
-- "dart.previewFlutterUiGuides": true -> 부모-child 관계를 선형으로 가이드선이 보여짐
-
-## Visual Studio Code plugin
-- error lens : 오류 부분 강조표시
-- prettier : 코드 줄정리
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <img width="22%" alt="toonflix app img" src="https://github.com/user-attachments/assets/f842fd13-b525-4a62-a9a2-f1fd13e875a7">
+  <img width="22%" alt="toonflix app img" src="https://github.com/user-attachments/assets/c71a8d8d-d53d-4d88-bd75-44f6c439a9b2">
+  <img width="22%" alt="toonflix app img" src="https://github.com/user-attachments/assets/2081b919-dfe7-4b7d-8462-b965c1be0954">
+  <img width="22%" alt="toonflix app img" src="https://github.com/user-attachments/assets/dc21f138-6587-41ef-b6bd-7200e5147313">
+</p>
