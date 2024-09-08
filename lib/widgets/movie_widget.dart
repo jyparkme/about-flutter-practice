@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../screens/detail_screen.dart';
+
 class MovieWidget extends StatelessWidget {
   final int id;
   final String title, poster_path;
@@ -20,30 +22,27 @@ class MovieWidget extends StatelessWidget {
 
     // Condition to determine if Text widget should be included
     final List<Widget> children = [
-      Hero(
-        tag: id,
-        child: Container(
-          width: width,
-          height: height,
-          clipBehavior: Clip.hardEdge,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(15),
-            // boxShadow: [
-            //   BoxShadow(
-            //     blurRadius: 15,
-            //     offset: const Offset(10, 10),
-            //     color: Colors.black.withOpacity(0.5),
-            //   ),
-            // ],
-          ),
-          child: Image.network(
-            '$poster_base$poster_path',
-            headers: const {
-              "User-Agent":
-                  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
-            },
-            fit: BoxFit.fill,
-          ),
+      Container(
+        width: width,
+        height: height,
+        clipBehavior: Clip.hardEdge,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(15),
+          // boxShadow: [
+          //   BoxShadow(
+          //     blurRadius: 15,
+          //     offset: const Offset(10, 10),
+          //     color: Colors.black.withOpacity(0.5),
+          //   ),
+          // ],
+        ),
+        child: Image.network(
+          '$poster_base$poster_path',
+          headers: const {
+            "User-Agent":
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+          },
+          fit: BoxFit.fill,
         ),
       ),
       if (type == true) // Add Text widget only if type is not true
@@ -63,6 +62,17 @@ class MovieWidget extends StatelessWidget {
       child: Column(
         children: children,
       ),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailScreen(
+              id: id,
+              poster_path: '$poster_base$poster_path',
+            ),
+          ),
+        );
+      },
     );
   }
 }
